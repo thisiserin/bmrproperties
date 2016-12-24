@@ -1,0 +1,176 @@
+/* HEADER */
+
+.logo {
+  margin: 10px auto;
+  width: 300px;
+}
+
+/* END HEADER */
+
+/* PRIMARY */
+
+.tagline {
+  background-color: $primaryColor;
+  color: $baseColor;
+  padding: 10px;
+  text-align: center;
+}
+.primary {
+  @include bg($primaryColor, "img/Street_view_out_a_window.jpg", 0px, 0px, 100%);
+  height: 450px;
+  .cta {
+    h2 {
+      color: $baseColor;
+      display: block;
+      font-size: 3rem;
+      line-height: 3rem;
+      margin: 200px 10px 0 10px;
+      text-align: center;
+      text-shadow: 2px 2px $secondaryColor;
+    }
+    a {
+      @include button($primaryColor, 30px, 10px, 15px, 180px, $primaryColor);
+      @include link-colors($baseColor, $primaryColor, $baseColor, $baseColor, $baseColor);
+    }
+  }
+}
+
+/* END PRIMARY */
+
+/* TESTIMONIALS */
+
+.testimonials {
+  padding: 20px 3%;
+  img {
+    border: 2px solid $primaryColor;
+    width: 35%;
+    @include border-radius(50%);
+  }
+  p {
+    width: 55%;
+  }
+  .testimonial {
+    @include clearfix;
+    margin: 20px 0;
+    .quote {
+      color: $textColor;
+      text-align: left;
+    }
+    .name {
+      color: $secondaryColor;
+      text-align: right;
+    }
+    .title {
+      color: $primaryColor;
+      text-align: right;
+    }
+  }
+  .testimonial1, .testimonial3 {
+    img, p {
+      float: left;
+      margin-right: 5%;
+    }
+  }
+  .testimonial2 {
+    text-align: right;
+    img, p {
+      float: right;
+      margin-left: 5%;
+    }
+  }
+}
+
+/* END TESTIMONIALS */
+
+/* SERVICES */
+
+.service {
+  height: 450px;
+  a {
+    @include hover-link;
+  }
+  .service-title {
+    font-family: $sansFont;
+    font-size: 2rem;
+    padding: 20px 0 10px 20px;
+    text-transform: uppercase;
+  }
+  .service-description {
+    margin: 280px 0 0 10%;
+    padding: 10px;
+    text-align: right;
+    p {
+      margin-bottom: 5px;
+      text-align: left;
+    }
+  }
+}
+.service1 {
+  @include bg($primaryColor, "img/Chair_in_a_sun_parlour.jpg", center, center, 250%);
+  .service-title {
+    background-color: $primaryColor;
+    border-bottom: 2px solid $baseColor;
+    color: $baseColor;
+  }
+  .service-description {
+    background-color: $primaryColor;
+    color: $baseColor;
+  }
+  .cta {
+    @include link-colors($baseColor, $baseColor, $baseColor, $baseColor, $baseColor)
+  }
+}
+.service2 {
+  @include bg($baseColor, "img/Green_home_covered_in_ivy.jpg", 25px, 75px, 100%);
+  .service-title {
+    border-bottom: 2px solid $primaryColor;
+  }
+  .service-description {
+    background-color: $baseColor;
+  }
+}
+.service3 {
+  @include bg($baseColor, "img/Deckchairs_and_palm_trees_on_the_beach.jpg", 50%, 0, 300%);
+  .service-title {
+    background-color: #15667A;
+    border-bottom: 2px solid $baseColor;
+    color: $baseColor;
+  }
+  .service-description {
+    background-color: $baseColor;
+  }
+}
+
+/* END SERVICES */
+
+/* FOOTER */
+
+footer {
+  background-color: $primaryColor;
+  border-top: 2px solid $secondaryColor;
+  color: $baseColor;
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+  a {
+    @include link-colors($baseColor, $baseColor, $baseColor, $baseColor, $baseColor);
+    @include hover-link;
+  }
+  .contact {
+    font-size: 2rem;
+  }
+  .copyright {
+    margin-top: 40px;
+  }
+  .back-to-top {
+    margin-top: 50px;
+    a {
+      @include button($secondaryColor, 0, 15px, 25px, 30px, $secondaryColor);
+      @include link-colors($baseColor, $primaryColor, $baseColor, $primaryColor, $primaryColor);
+      display: inline;
+      font-size: 5rem;
+      padding-bottom: 5px;
+    }
+  }
+}
+ /* END FOOTER */

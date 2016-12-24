@@ -1,0 +1,62 @@
+$primaryColor: #315F3F;
+$secondaryColor: #23452D;
+$textColor: #262626;
+$baseColor: #fff;
+
+$serifFont: Lora, Garamond, serif;
+$sansFont: Ubuntu, Arial, sans-serif;
+
+
+* {
+	box-sizing: border-box;
+	transition-property: background, border, color, height, margin, opacity, padding, top, right, bottom, left, width;
+	transition-duration: .3s;
+	transition-timing-function: linear;
+}
+html {
+  font-size: 10px;
+}
+body {
+  background: $baseColor;
+  color: $primaryColor;
+  font-family: $serifFont;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+.hidden {
+  display: none;
+}
+a {
+  @include link-colors($primaryColor, $secondaryColor, $primaryColor, $secondaryColor, $secondaryColor);
+	font-family: $sansFont;
+  text-decoration: none;
+}
+
+
+// CUSTOM MIXINS
+
+@mixin button($color, $margin-top, $padding-top, $padding-side, $width, $color) {
+    background-color: $color;
+    display: block;
+    font-family: $sansFont;
+    margin: $margin-top auto 20px auto;
+    padding: $padding-top $padding-side;
+		text-align: center;
+    width: $width;
+		@include border-radius(5px);
+    &:hover {
+      background-color: $baseColor;
+			text-decoration: none;
+    }
+    &:active {
+      background-color: $color;
+    }
+}
+
+@mixin bg($bg-color, $bg-url, $bg-pos-1, $bg-pos-2, $bg-size) {
+	background-color: $bg-color;
+	background-image: url($bg-url);
+	background-repeat: no-repeat;
+	background-position: $bg-pos-1 $bg-pos-2;
+	background-size: $bg-size;
+}
